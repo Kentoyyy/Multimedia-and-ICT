@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Multimedia and ICT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Multimedia and ICT
+               <br> STI COLLEGE LIPA
+            </h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feature-img">
+                        <img src="./videos/pic1.png" width="80%">
+                        <img src="./videos/play.png" class="play-btn" 
+                        onclick="playVideo('./videos/STI CHRISTMAS.mp4')">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="./videos/pic2.jpg">
+                            <img src="./videos/play.png" class="play-btn"
+                            onclick="playVideo('./videos/STI.mp4')">
+                        </div>
+                        <p>One Day Cover - STI Faculty and Staff
+                        </p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="./videos/pic3.jpg">
+                            <img src="./videos/play.png" class="play-btn"
+                            onclick="playVideo('./videos/STI Teen Edition.mp4')">
+                        </div>
+                        <p>STI Quaran - Teen Edition
+                        </p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="./videos/pic4.jpg">
+                            <img src="./videos/play.png" class="play-btn">
+                        </div>
+                        <p>STI Hymn
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>  
+
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="./videos/STI CHRISTMAS.mp4" type="video/mp4">
+
+            </video>
+            <img src="./videos/close.png" class="close-btn" onclick="stopVideo()">    
+        </div>
+
+        <script>
+            var  videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myVideo")
+
+            function stopVideo(){
+                videoPlayer.style.display = "none";
+            }
+
+            function playVideo(file){
+                myVideo.src = file;
+                videoPlayer.style.display = "block";
+            }
+        </script>
+
+    </body>
+</html>
